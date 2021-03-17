@@ -15,8 +15,8 @@ public:
     auto operator=(Curve const &source) -> Curve &;
     auto operator+(Curve const &source) -> Curve;
     auto operator+(Point const &source) -> Curve;
-    auto operator+=(Curve const &source) -> Curve;
-    auto operator+=(Point const &source) -> Curve;
+    auto operator+=(Curve const &source) -> Curve &;
+    auto operator+=(Point const &source) -> Curve &;
 
     friend auto operator<<(std::ostream &os, Curve const &curve) -> std::ostream &;
 

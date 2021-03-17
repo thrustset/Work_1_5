@@ -13,7 +13,7 @@ public:
 
     auto operator=(Point const &source) -> Point &;
     auto operator*(double coefficient) -> Point;
-    auto operator*=(double coefficient) -> Point;
+    auto operator*=(double coefficient) -> Point &;
 
     friend auto operator<<(std::ostream &os, Point const &point) -> std::ostream &;
 

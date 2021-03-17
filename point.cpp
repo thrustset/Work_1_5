@@ -24,7 +24,7 @@ auto Point::operator*(double coefficient) -> Point {
     return point;
 }
 
-auto Point::operator*=(double coefficient) -> Point {
+auto Point::operator*=(double coefficient) -> Point & {
     this->x *= coefficient;
     this->y *= coefficient;
     return *this;

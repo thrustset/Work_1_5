@@ -64,7 +64,7 @@ auto Curve::operator+(Point const &source) -> Curve {
     return Curve(this->name, this->numOfPoints + 1, newArray);
 }
 
-auto Curve::operator+=(Curve const &source) -> Curve {
+auto Curve::operator+=(Curve const &source) -> Curve & {
     int i;
     int newNumOfPoints = this->numOfPoints;
     auto *newArray = new Point[newNumOfPoints + source.getNumOfPoints()];
@@ -88,7 +88,7 @@ auto Curve::operator+=(Curve const &source) -> Curve {
     return *this;
 }
 
-auto Curve::operator+=(const Point &source) -> Curve {
+auto Curve::operator+=(const Point &source) -> Curve & {
     auto *newArray = new Point[this->numOfPoints + 1];
     for(int i = 0; i < numOfPoints; i++)
         newArray[i] = this->array[i];
